@@ -34,5 +34,4 @@ all_text_2 = soup_2.find_all("div", class_ = "inner js-replace-text")
 print(all_text_2[0].text.strip())  # output the first rating on the second page  "[0]"
 print(all_text_2[1].text.strip())  # output the second rating on the second page "[1]"
 
-2. text analysis (NLP)
-
+# 2. text analysis (NLP)
