@@ -87,7 +87,7 @@ def get_dataframe_for_products(products: list, column_names=['product_name', 're
 products = ["sennheiser_hd_25", "gravity_ksx_2_rd",
             "istanbul_agop_13_xist_dry_dark_crash"]
 
-get_dataframe_for_products(products)
+product_dataframe = get_dataframe_for_products(products)
 
 
 # 2. text analysis (NLP)
