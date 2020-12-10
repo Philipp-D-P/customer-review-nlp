@@ -4,6 +4,8 @@ import numpy as np
 import pandas as pd
 import re
 
+MAX_NUMBER_OF_STARS = 5
+
 # analyze thomann music store customer reviews
 # 1. web scraping
 
@@ -51,7 +53,7 @@ def get_stars_from_review(review: str, css_selector=".total-stars .overlay-wrapp
     selector = soup.select(css_selector)
     style = selector[0].get("style")
     percentage = float(re.search(r"(\d+(\.\d+)?)", style).group(1))
-    return 5 * (percentage / 100)
+    return MAX_NUMBER_OF_STARS * (percentage / 100)
 
 
 def get_text_from_review(review: str, css_selector=".inner.js-replace-text"):
